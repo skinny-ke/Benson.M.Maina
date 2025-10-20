@@ -26,7 +26,7 @@ const Footer = () => {
     { icon: Github, link: "https://github.com", label: "GitHub" },
     { icon: Linkedin, link: "https://linkedin.com", label: "LinkedIn" },
     { icon: Twitter, link: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, link: "mailto:benson.murage@email.com", label: "Email" },
+    { icon: Mail, link: "mailto:bensonmurage254@gmail.com", label: "Email" },
   ];
 
   return (
@@ -80,12 +80,12 @@ const Footer = () => {
             <ul className="space-y-2 text-muted-foreground">
               <li>
                 <a href="mailto:benson.murage@email.com" className="hover:text-primary transition-colors">
-                  benson.murage@email.com
+                  bensonmurage254@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+254700123456" className="hover:text-primary transition-colors">
-                  +254 700 123 456
+                <a href="tel:+254742846843" className="hover:text-primary transition-colors">
+                  +254 742846842
                 </a>
               </li>
               <li>Nairobi, Kenya</li>
