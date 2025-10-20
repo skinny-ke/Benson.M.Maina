@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
-  const titles = ["Software Engineer", "Full Stack Developer"];
+  const titles = ["Software Engineer", "Full Stack Developer" , "Information Technology"];
   const colors = [
     "hsl(220, 90%, 56%)", // primary
     "hsl(260, 80%, 60%)", // accent
@@ -72,7 +72,7 @@ const Hero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-primary bg-clip-text text-transparent"
             >
-              Benson Murage
+              Benson Murage Mainaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
             </motion.h1>
 
             <div className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 h-12 sm:h-14 md:h-16 flex items-center justify-center">
