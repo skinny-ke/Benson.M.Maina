@@ -13,8 +13,8 @@ const Experience = () => {
       type: "education",
       icon: GraduationCap,
       title: "BSc. Information Technology",
-      organization: "University of Nairobi",
-      period: "2018 - 2022",
+      organization: "Murang'a University of Technology",
+      period: "2024 - 2028",
       description: "Graduated with honors. Focus on software engineering, database systems, and web technologies.",
     },
     {
