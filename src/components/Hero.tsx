@@ -1,9 +1,36 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentTitle, setCurrentTitle] = useState(0);
+  const titles = ["Software Engineer", "Full Stack Developer"];
+  const colors = [
+    "hsl(220, 90%, 56%)", // primary
+    "hsl(260, 80%, 60%)", // accent
+    "hsl(200, 90%, 50%)", // cyan
+    "hsl(280, 70%, 60%)", // purple
+    "hsl(340, 80%, 60%)", // pink
+  ];
+  const [colorIndex, setColorIndex] = useState(0);
+
+  useEffect(() => {
+    const titleInterval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    }, 3000);
+
+    const colorInterval = setInterval(() => {
+      setColorIndex((prev) => (prev + 1) % colors.length);
+    }, 2000);
+
+    return () => {
+      clearInterval(titleInterval);
+      clearInterval(colorInterval);
+    };
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
@@ -48,14 +75,21 @@ const Hero = () => {
               Benson Murage
             </motion.h1>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-foreground"
-            >
-              Software Engineer & Full Stack Developer
-            </motion.h2>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 h-12 sm:h-14 md:h-16 flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                <motion.h2
+                  key={currentTitle}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  style={{ color: colors[colorIndex] }}
+                  className="font-semibold transition-colors duration-1000"
+                >
+                  {titles[currentTitle]}
+                </motion.h2>
+              </AnimatePresence>
+            </div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
