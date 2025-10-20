@@ -90,9 +90,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, link: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, link: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, link: "https://twitter.com", label: "Twitter" },
+    { icon: Github, link: "https://github.com/skinny-ke", label: "GitHub" },
+    { icon: WhatsApp, link: "https://wa.me/254105297124", label: "WhatsApp" },
+    { icon: Twitter, link: "https://x.com/Z9345378128311?t=9h-s_c_4Cja9R-ZMd4ZyzA&s=09", label: "Twitter" },
   ];
 
   return (
