@@ -40,14 +40,14 @@ const Contact = () => {
       // Configure EmailJS with your credentials
       // Get your keys from https://dashboard.emailjs.com/
       await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_hn2sapk",
+        "template_7lt0crj",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY"
+        "ep3M4aIqO2dmUxvTu"
       );
 
       toast({
