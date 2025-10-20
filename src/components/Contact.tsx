@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -91,7 +91,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Github, link: "https://github.com/skinny-ke", label: "GitHub" },
-    { icon: WhatsApp, link: "https://wa.me/254105297124", label: "WhatsApp" },
+    { icon: MessageCircle, link: "https://wa.me/254105297124", label: "WhatsApp" },
     { icon: Twitter, link: "https://x.com/Z9345378128311?t=9h-s_c_4Cja9R-ZMd4ZyzA&s=09", label: "Twitter" },
   ];
 
