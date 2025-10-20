@@ -72,14 +72,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "benson.murage@email.com",
-      link: "mailto:benson.murage@email.com",
+      value: "bensonmurage254@gmail.com",
+      link: "mailto:bensonmurage254@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+254 700 123 456",
-      link: "tel:+254700123456",
+      value: "+254 742846842",
+      link: "tel:+254742846842",
     },
     {
       icon: MapPin,
