@@ -10,7 +10,7 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Lynn Johnson",
       role: "CEO, TechStart Kenya",
       content: "Benson is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are outstanding.",
       avatar: "SJ",
