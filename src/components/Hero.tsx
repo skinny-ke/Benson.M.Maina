@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
-  const titles = ["Software Engineer", "Full Stack Developer" , "Information Technology"];
+  const titles = ["Full Stack Developer" , "Information Technology"];
   const colors = [
     "hsl(220, 90%, 56%)", // primary
     "hsl(260, 80%, 60%)", // accent
