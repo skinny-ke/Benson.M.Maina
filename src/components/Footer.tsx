@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, link: "https://github.com", label: "GitHub" },
+    { icon: Github, link: "https://skinny-ke.github.com", label: "GitHub" },
     { icon: Linkedin, link: "https://linkedin.com", label: "LinkedIn" },
     { icon: Twitter, link: "https://twitter.com", label: "Twitter" },
     { icon: Mail, link: "mailto:bensonmurage254@gmail.com", label: "Email" },
@@ -38,7 +38,7 @@ const Footer = () => {
               Benson Murage
             </h3>
             <p className="text-muted-foreground mb-4">
-              Software Engineer & Full Stack Developer building modern web solutions with passion and precision.
+              BSc. Information Technology & Full Stack Developer building modern web solutions with passion and precision.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => {
