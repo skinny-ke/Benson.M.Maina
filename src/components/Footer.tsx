@@ -25,7 +25,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Github, link: "https://skinny-ke.github.com", label: "GitHub" },
     { icon: Linkedin, link: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, link: "https://twitter.com", label: "Twitter" },
+    { icon: Twitter, link: "https://x.com/Z9345378128311?t=9h-s_c_4Cja9R-ZMd4ZyzA&s=09", label: "Twitter" },
     { icon: Mail, link: "mailto:bensonmurage254@gmail.com", label: "Email" },
   ];
 

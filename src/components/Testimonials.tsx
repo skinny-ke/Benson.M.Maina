@@ -13,13 +13,13 @@ const Testimonials = () => {
       name: "Lynn Johnson",
       role: "CEO, TechStart Kenya",
       content: "Benson is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are outstanding.",
-      avatar: "SJ",
+      avatar: "LJ",
     },
     {
-      name: "Michael Chen",
+      name: "Michael Kamau",
       role: "CTO, Digital Solutions Ltd",
       content: "Working with Benson was a pleasure. He brought fresh ideas to the team and his technical expertise helped us launch our product ahead of schedule.",
-      avatar: "MC",
+      avatar: "MK",
     },
     {
       name: "Emily Wanjiku",

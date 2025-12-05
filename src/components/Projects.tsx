@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import project4 from "@/assets/project4.jpg";
+import haven from "@/assets/haven.png";
+import benmarket from "@/assets/benmarket.png";
+import Notesapp from "@/assets/Notesapp.png";
+import safecycle from "@/assets/safecycle.png";
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "Ben-MarketShop",
       description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      image: project1,
+      image: benmarket,
       tech: ["React", "Node.js", "MongoDB", "Stripe", "M-pesa"],
       github: "#",
       demo: "https://ben-market-shop.pages.dev",
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "Keep-Notes",
       description: "A notes app where you can store your notes with media safe and secure.",
-      image: project2,
+      image: Notesapp,
       tech: ["Next.js", "TypeScript", "PostgreSQL",],
       github: "#",
       demo: "https://keep-notes-green.vercel.app",
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: "SafeCycle Period Tracker",
       description: "A periods tracker with cycle calender and AI health insights.",
-      image: project3,
+      image: safecycle,
       tech: ["React", "Supabase", "Tailwind CSS", "Redux"],
       github: "#",
       demo: "https://safe-cycleapp.vercel.app",
@@ -41,7 +41,7 @@ const Projects = () => {
     {
       title: "Haven Companion",
       description: "AI application for people dealing with mental healt issues, has a journal, a community, and emergency support.",
-      image: project4,
+      image: haven,
       tech: ["React", "OpenAI", "Supabase", "Tailwind"],
       github: "#",
       demo: "https://haven-companion.vercel.app",
