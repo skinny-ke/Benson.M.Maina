@@ -23,7 +23,7 @@ const Projects = () => {
       demo: "https://ben-market-shop.pages.dev",
     },
     {
-      title: "Notes app",
+      title: "Keep-Notes",
       description: "A notes app where you can store your notes with media safe and secure.",
       image: project2,
       tech: ["Next.js", "TypeScript", "PostgreSQL",],
@@ -31,12 +31,12 @@ const Projects = () => {
       demo: "https://keep-notes-green.vercel.app",
     },
     {
-      title: "Luna Period Tracker",
+      title: "SafeCycle Period Tracker",
       description: "A periods tracker with cycle calender and AI health insights.",
       image: project3,
       tech: ["React", "Supabase", "Tailwind CSS", "Redux"],
       github: "#",
-      demo: "safe-cycleapp.vercel.app",
+      demo: "https://safe-cycleapp.vercel.app",
     },
     {
       title: "Haven Companion",
