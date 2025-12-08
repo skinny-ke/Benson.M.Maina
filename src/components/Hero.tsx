@@ -138,7 +138,7 @@ const Hero = () => {
               whileHover={{ y: -5 }}
               className="text-center"
             >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">3+</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-primary">1+</h3>
               <p className="text-sm text-muted-foreground">Years Experience</p>
             </motion.div>
             <div className="w-px bg-border" />
@@ -146,7 +146,7 @@ const Hero = () => {
               whileHover={{ y: -5 }}
               className="text-center"
             >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">20+</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-primary">5+</h3>
               <p className="text-sm text-muted-foreground">Projects Completed</p>
             </motion.div>
             <div className="w-px bg-border" />

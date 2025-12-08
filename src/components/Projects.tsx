@@ -59,7 +59,7 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Featured <span className="gradient-primary bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-purple-700 to-cyan-400 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work and technical capabilities
