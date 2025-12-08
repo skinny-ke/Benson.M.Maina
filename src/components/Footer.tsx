@@ -34,7 +34,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold gradient-primary bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-cyan-400 bg-clip-text text-transparent">
               Benson Murage
             </h3>
             <p className="text-muted-foreground mb-4">
