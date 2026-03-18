@@ -50,6 +50,35 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       
+      {/* Floating particles */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              width: 4 + (i % 4) * 3,
+              height: 4 + (i % 4) * 3,
+              left: `${8 + i * 8}%`,
+              top: `${15 + (i * 7) % 70}%`,
+              background: `hsl(${220 + i * 15}, 80%, 60%)`,
+              opacity: 0.15,
+            }}
+            animate={{
+              y: [0, -40 - i * 5, 0],
+              x: [0, 20 * (i % 2 === 0 ? 1 : -1), 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 5 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.3,
+            }}
+          />
+        ))}
+      </div>
+      
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
