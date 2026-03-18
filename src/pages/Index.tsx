@@ -8,10 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <Navigation />
       <main>
         <Hero />
@@ -24,6 +27,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
