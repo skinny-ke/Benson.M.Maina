@@ -3,6 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useState, useEffect } from "react";
+import { useCountUp } from "@/hooks/use-count-up";
+
+const StatItem = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+  const { value, ref } = useCountUp(end);
+  return (
+    <motion.div ref={ref} whileHover={{ y: -5 }} className="text-center">
+      <h3 className="text-3xl md:text-4xl font-bold text-primary">
+        {value}
+        {suffix}
+      </h3>
+      <p className="text-sm text-muted-foreground">{label}</p>
+    </motion.div>
+  );
+};
+
 
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
