@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from "@emailjs/browser";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -40,17 +40,18 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        "service_hn2sapk",
-        "template_7lt0crj",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formData.name,
+          email: formData.email,
           subject: formData.subject || "Portfolio Contact",
           message: formData.message,
         },
-        "ep3M4aIqO2dmUxvTu"
-      );
+      });
+
+      if (error || (data && (data as { error?: string }).error)) {
+        throw new Error(error?.message ?? "Failed to send message");
+      }
 
       setIsSent(true);
       toast({
