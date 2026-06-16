@@ -124,4 +124,66 @@ All colors MUST be HSL.
     backdrop-filter: blur(10px);
     border: 1px solid hsl(var(--border) / 0.5);
   }
+
+  /* Animated gradient text */
+  .text-gradient {
+    background: linear-gradient(
+      120deg,
+      hsl(220 90% 60%),
+      hsl(260 80% 65%),
+      hsl(200 90% 55%),
+      hsl(280 70% 65%)
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 6s ease infinite;
+  }
+
+  /* Subtle dotted grid backdrop */
+  .bg-grid {
+    background-image: radial-gradient(
+      hsl(var(--primary) / 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 40%, transparent 100%);
+  }
+
+  /* Aurora blobs */
+  .aurora {
+    filter: blur(80px);
+    opacity: 0.5;
+    will-change: transform;
+  }
 }
+
+@layer base {
+  @keyframes text-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes aurora-drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(40px, -30px) scale(1.1); }
+    66% { transform: translate(-30px, 30px) scale(0.95); }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+
+  .animate-aurora {
+    animation: aurora-drift 18s ease-in-out infinite;
+  }
+}
+
