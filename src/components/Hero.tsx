@@ -64,6 +64,18 @@ const Hero = () => {
       }}
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+
+      {/* Aurora blobs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="aurora animate-aurora absolute -top-32 -left-24 h-96 w-96 rounded-full bg-primary/40" />
+        <div className="aurora animate-aurora absolute top-1/3 -right-24 h-[28rem] w-[28rem] rounded-full bg-accent/40" style={{ animationDelay: "-6s" }} />
+        <div className="aurora animate-aurora absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-primary/30" style={{ animationDelay: "-12s" }} />
+      </div>
+
+      {/* Dotted grid backdrop */}
+      <div className="absolute inset-0 bg-grid pointer-events-none" />
+
+
       
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
