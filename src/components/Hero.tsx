@@ -3,6 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useState, useEffect } from "react";
+import { useCountUp } from "@/hooks/use-count-up";
+
+const StatItem = ({ end, suffix, label }: { end: number; suffix: string; label: string }) => {
+  const { value, ref } = useCountUp(end);
+  return (
+    <motion.div ref={ref} whileHover={{ y: -5 }} className="text-center">
+      <h3 className="text-3xl md:text-4xl font-bold text-primary">
+        {value}
+        {suffix}
+      </h3>
+      <p className="text-sm text-muted-foreground">{label}</p>
+    </motion.div>
+  );
+};
+
 
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -49,6 +64,18 @@ const Hero = () => {
       }}
     >
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+
+      {/* Aurora blobs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="aurora animate-aurora absolute -top-32 -left-24 h-96 w-96 rounded-full bg-primary/40" />
+        <div className="aurora animate-aurora absolute top-1/3 -right-24 h-[28rem] w-[28rem] rounded-full bg-accent/40" style={{ animationDelay: "-6s" }} />
+        <div className="aurora animate-aurora absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-primary/30" style={{ animationDelay: "-12s" }} />
+      </div>
+
+      {/* Dotted grid backdrop */}
+      <div className="absolute inset-0 bg-grid pointer-events-none" />
+
+
       
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -99,7 +126,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient"
             >
               Benson M. Maina
             </motion.h1>
@@ -163,29 +190,11 @@ const Hero = () => {
             transition={{ delay: 1, duration: 1 }}
             className="mt-16 flex justify-center gap-6"
           >
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">1+</h3>
-              <p className="text-sm text-muted-foreground">Years Experience</p>
-            </motion.div>
+            <StatItem end={1} suffix="+" label="Years Experience" />
             <div className="w-px bg-border" />
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">5+</h3>
-              <p className="text-sm text-muted-foreground">Projects Completed</p>
-            </motion.div>
+            <StatItem end={5} suffix="+" label="Projects Completed" />
             <div className="w-px bg-border" />
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">10+</h3>
-              <p className="text-sm text-muted-foreground">Happy Clients</p>
-            </motion.div>
+            <StatItem end={10} suffix="+" label="Happy Clients" />
           </motion.div>
         </div>
       </div>
