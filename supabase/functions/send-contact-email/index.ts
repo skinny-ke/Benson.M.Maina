@@ -71,7 +71,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         from: 'Portfolio Contact <onboarding@resend.dev>',
-        to: ['bensonmurage254@gmail.com'],
+        to: ['maishb800@gmail.com'],
         reply_to: email,
         subject: `New message from ${name} - ${safeSubject}`,
         html,
