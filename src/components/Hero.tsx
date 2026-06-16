@@ -126,7 +126,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient"
             >
               Benson M. Maina
             </motion.h1>
