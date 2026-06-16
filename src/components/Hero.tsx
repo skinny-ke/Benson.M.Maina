@@ -190,29 +190,11 @@ const Hero = () => {
             transition={{ delay: 1, duration: 1 }}
             className="mt-16 flex justify-center gap-6"
           >
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">1+</h3>
-              <p className="text-sm text-muted-foreground">Years Experience</p>
-            </motion.div>
+            <StatItem end={1} suffix="+" label="Years Experience" />
             <div className="w-px bg-border" />
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">5+</h3>
-              <p className="text-sm text-muted-foreground">Projects Completed</p>
-            </motion.div>
+            <StatItem end={5} suffix="+" label="Projects Completed" />
             <div className="w-px bg-border" />
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="text-center"
-            >
-              <h3 className="text-3xl md:text-4xl font-bold text-primary">10+</h3>
-              <p className="text-sm text-muted-foreground">Happy Clients</p>
-            </motion.div>
+            <StatItem end={10} suffix="+" label="Happy Clients" />
           </motion.div>
         </div>
       </div>
